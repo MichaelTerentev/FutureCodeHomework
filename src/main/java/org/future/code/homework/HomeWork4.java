@@ -40,10 +40,17 @@ public class HomeWork4 {
 
     public static List<String> correctedList(List<String> stringList) {
         // Место для Вашего кода задания №1
-        return Collections.emptyList();
+        List <String> correctedList = new ArrayList <String> ();
+        for(String s: stringList) {
+        	correctedList.add(s.toLowerCase());
+        }
+        return correctedList;
     }
     public static HashMap<String, Integer> magSort(HashMap<String, Integer> shopCart) {
         // Место для Вашего кода задания №2
+         for(String i : shopCart.keySet()) {
+           if(shopCart.get(i) > 300) shopCart.remove(i); 	
+        }
         return shopCart;
     }
 
